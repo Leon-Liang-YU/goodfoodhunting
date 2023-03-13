@@ -25,4 +25,4 @@ const db = new Pool(process.env.DATABASE_URL ?  config.prod : config.dev)
 //     database:"goodfoodhunting"
 // })
 
-module.exports = pool
+module.exports = db
