@@ -1,0 +1,11 @@
+    <!-- <form action="/delete_dish/<%=dish.id%>">
+    <label for=""></label>
+    <!-- <input type="text" name="dish_id"> -->
+        <!-- <button>delete</button>
+    </form> --> --> -->
+
+    <!-- <form action="/delete_dish" method="delete" >
+        <label for="">dish id</label>
+        <!-- <input type="hidden" name="dish_id" value="<%=dish.id%>"> -->
+            <!-- <button>delete</button>
+        </form> --> -->

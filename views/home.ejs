@@ -1,0 +1,17 @@
+
+    
+
+    
+    <section class="dishes"> 
+    
+
+    <a href="/dishes/new">share dish</a>
+
+    <% for (let dish of dishes){%>
+        <div class="ui-card">
+            <a href="/dishes/<%= dish.id%>"><%= dish.title%></a>
+            <img src="<%= dish.image_url%>" style="width: 650px; height: 500px;"/>
+        </div>
+    <% } %>
+    </section>
+
