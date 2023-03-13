@@ -22,12 +22,12 @@ router.get("/", (req,res)=>{
     })
 })
 
-router.get('/dishes/new',(req,res)=>{
+router.get('/dishes/new',ensureLoggedIn ,(req,res)=>{
 
     res.render("new_dish")
 })
 
-router.get("/dishes/:id", (req, res) =>{
+router.get("/dishes/:id",ensureLoggedIn ,(req, res) =>{
     
     //pg gona sanitise $1 $2 ...
     const sql = `select * from dishes where id = $1;`
@@ -45,7 +45,7 @@ router.get("/dishes/:id", (req, res) =>{
 
 })
 
-router.post("/dishes",(req, res)=>{
+router.post("/dishes",ensureLoggedIn , (req, res)=>{
 
     if (!req.session.userId){
 

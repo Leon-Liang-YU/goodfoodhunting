@@ -20,7 +20,7 @@ const expressLayouts = require('express-ejs-layouts');
 // })
 app.set("view engine", "ejs")
 
-app.use(express.static("public"))
+// app.use(express.static("public"))
 
 const logger = require("./middlewares/logger")
 const dishController=require('./controllers/dish_controller')
@@ -40,7 +40,7 @@ app.use(methodOverride)
 app.use(
     session({
 
-    secret: "keyboard cat",
+    secret: process.env.SESSION_SECRET || "mistyrose",
     resave: false,
     saveUninitialized: true,
     })
